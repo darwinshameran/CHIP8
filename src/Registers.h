@@ -9,7 +9,7 @@ private:
 	/* 8-bit general purpose data registers ranging from V0 to VF.
 	 * The 16th register, VF, is equal to the carry flag in other systems.
 	 */
-	std::unordered_map<std::string, unsigned char> m_dataRegisters = {
+	std::unordered_map<std::string, uint8_t> m_dataRegisters = {
 		{"V0", 0},
 		{"V1", 0},
 		{"V2", 0},
@@ -31,7 +31,7 @@ private:
 	/* 8-bit stack pointer. The SP register is used to point to the topmost
 	 * level of the stack.
 	 */
-	std::unordered_map<std::string, unsigned short> m_stackPointerRegister = {
+	std::unordered_map<std::string, uint16_t> m_stackPointerRegister = {
 			{"SP", 0}
 	};
 
@@ -43,7 +43,7 @@ private:
 	 * The sound timer is active whenever the sound timer register (ST) is
 	 * non-zero.
 	 */
-	std::unordered_map<std::string, unsigned short> m_timerRegister = {
+	std::unordered_map<std::string, uint16_t> m_timerRegister = {
 			{"DT", 0},
 			{"ST", 0}
 	};
@@ -53,14 +53,14 @@ private:
 	 *
 	 * The index register (I) is used as index for fetching memory addresses.
 	 */
-	std::unordered_map<std::string, unsigned short> m_programRegister = {
+	std::unordered_map<std::string, uint16_t> m_programRegister = {
 			{"PC", 0},
 			{"I", 0}
 	};
  public:
-	unsigned char& getDataRegister(const std::string name);
-	unsigned short& getStackPointerRegister(const std::string name);
-	unsigned short& getTimerRegister(const std::string name);
-	unsigned short& getProgramRegister(const std::string name);
+	uint8_t& getDataRegister(const std::string name);
+	uint16_t& getStackPointerRegister(const std::string name);
+	uint16_t& getTimerRegister(const std::string name);
+	uint16_t& getProgramRegister(const std::string name);
 };
 #endif
