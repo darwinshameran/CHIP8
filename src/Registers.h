@@ -61,8 +61,4 @@ private:
 	unsigned short& getStackPointerRegister(const std::string name);
 	unsigned short& getTimerRegister(const std::string name);
 	unsigned short& getProgramRegister(const std::string name);
-
 };
-
-
-	/* vim: set ts=8 sw=4 tw=79 ft=cpp et :*/

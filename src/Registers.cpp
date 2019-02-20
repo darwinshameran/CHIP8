@@ -15,5 +15,3 @@ unsigned short& Registers::getTimerRegister(const std::string name) {
 unsigned short& Registers::getProgramRegister(const std::string name) {
 	return m_programRegister.at(name);
 }
-
-/* vim: set ts=8 sw=4 tw=79 ft=cpp et :*/
