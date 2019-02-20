@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿#ifndef REGISTERS_H
+#define REGISTERS_H
 
 #include <string>
 #include <unordered_map>
@@ -62,3 +63,4 @@ private:
 	unsigned short& getTimerRegister(const std::string name);
 	unsigned short& getProgramRegister(const std::string name);
 };
+#endif
